@@ -1,0 +1,35 @@
+/* Basic styles for table.html */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #c8e2ec;
+    margin: 40px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 12px 16px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+th {
+    background: #f4f6f9;
+    color: #ac0c0c;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #e4bbbb;
+}
+
+tr:hover {
+    background: #e9ecef;
+}
