@@ -28,5 +28,15 @@ body{
         color: rgb(255, 255, 255);
         background-position: 0cm 0cm;
     }
-    
+    .firebutton{
+        background-color: rgb(240, 152, 36);
+        color: rgb(242, 240, 238);
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        font-style: italic;
+        font-weight: bolder;
+        cursor: pointer;
+    }
 }
