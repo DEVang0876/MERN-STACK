@@ -1,4 +1,5 @@
 body{
+    background: #ceefeb;
     h1{
         color: rgb(222, 161, 29);
     }
@@ -20,5 +21,10 @@ body{
         font-family: Arial, sans-serif;
         font-style: italic;
         font-weight: bolder;
+    }
+    #fireid{
+        background-color: rgb(227, 158, 10);
+        color: rgb(255, 255, 255);
+        background-position: 0cm 0cm;
     }
 }
