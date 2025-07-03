@@ -1,8 +1,13 @@
 body{
     background:rgb(245, 197, 134);
-    h1{
-        color: rgb(222, 161, 29);
-    }
+}
+a{
+    text-decoration: none;
+}
+h1, ul,li{
+    color: rgb(222, 161, 29);
+    text-decoration: none;
+}
     .fire{
         background-color: rgb(240, 152, 36);
         color: rgb(242, 240, 238);
@@ -30,7 +35,7 @@ body{
     }
     .firebutton{
         background-color: rgb(240, 152, 36);
-        color: rgb(242, 240, 238);
+        color: rgb(249, 248, 246);
         padding: 10px;
         border-radius: 15px;
         font-size: 20px;
@@ -39,7 +44,7 @@ body{
         font-weight: bolder;
         cursor: pointer;
         position: fixed ;
-        bottom: 0px;
+        bottom: 70px;
         
     }
     .firebutton:hover{
@@ -47,5 +52,13 @@ body{
         color: rgb(231, 176, 25);
         box-shadow: 0 140px 10px rgba(36, 1, 1, 0.2);
     }
-    
-}
+    /*fixed button on bottom  which remain at bottom shle scorling*/
+    .footer{
+        background-color: rgb(240, 152, 36);
+        color: rgb(242, 240, 238);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
