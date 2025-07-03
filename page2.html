@@ -5,16 +5,65 @@
         </title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body style="background-color: wheat;">
+    <style>
+        body {
+            background-color: rgb(236, 206, 150);
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: darkblue;
+        }
+        h2 {
+            color: darkgreen;
+        }
+        ul {
+            list-style-type: square;
+        }
+        div{
+            margin: 25px;
+            padding: 10px;
+            border: 2px solid #eaacac;
+            background-color: #f9f9f9;
+            border-bottom: 10px solid #e09292;
+            
+        }
+        div:hover {
+            background-color: #f0e7e7;
+            border: 2px solid #d10f0f;
+            border-bottom: 10px solid #d10f0f;
+            /* background-color: #ebd857;
+            border-bottom: 10px solid #eee3e3;
+            padding: 20px; */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: small;
+        }
+    </style>
+    <body style="background-color: rgb(236, 206, 150);">
         <h1>Welcome to the Example Application</h1>
         <p>This is a simple demo page to showcase the application functionality.</p>
-        
+        <h2 class="fire">Welcome to the Example Application</h2>
         <h2>Features</h2>
         <ul>
-            <li>Feature 1: User Authentication</li>
+            <li id="fireid">Feature 1: User Authentication</li>
             <li>Feature 2: Data Visualization</li>
             <li>Feature 3: Real-time Updates</li>
         </ul>
+
+
+        <div style="background-color: #f0e7e7; padding: 10px; border-radius: 5px;">
+            <h2>Getting Started</h2>
+            <p>To get started, please follow the instructions in the documentation.</p>
+            <h1>Welcome to the Example Application</h1>
+            <small>small</small>
+            <p>For more information, visit our <a href="https://example.com">
+            <big>Big</big> 
+        </div>
+
+
 
         <footer>
             <p id="fireid">&copy; 2023 Example Application. All rights reserved.</p>
