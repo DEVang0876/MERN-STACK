@@ -1,9 +1,14 @@
-body{
+body {
     background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 h1 {
     text-align: center;
 }
+
 .header {
     background-color: lightblue;
     padding: 20px;
@@ -11,45 +16,79 @@ h1 {
     border: solid 2px darkblue;
     width: 100%;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     color: darkblue;
+    position: fixed;
+  
 }
+
 .header:hover {
     background-color: lightcyan;
     cursor: pointer;
-    
 }
+
 .footer {
     background-color: wheat;
-    border-radius: 17px;
+    border-radius: 17px 17px 0 0;
     padding: 10px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     position: fixed;
-    bottom: 1;
+    bottom: 0;
     width: 100%;
     border-top: solid 2px darkgray;
 }
-.product {
-    img {
-    width: 355px;
-    height: 355px;
-    }
+
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 640px;
-    width: 335px;
+    gap: 20px;
+    padding: 120px 20px 80px 20px; 
+}
+
+.product {
+    width: 280px;
+    background-color: white;
     border: solid 1px darkgray;
     border-radius: 10px;
-    padding: 10px;
-    margin: 8px;
-    background-color: white;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    flex: 0 1 255px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.product h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
 .product:hover {
-    color: rgb(9, 0, 0);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    transform: scale(1.015);
+    cursor: pointer;
+}
+
+.product button{
+    width: 75%;
+    height: 30px;
+    background-color: wheat;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    border-radius: 15px;
+    font-weight: bolder;
+    font-size: 11pt;
+
+}
+.product button:hover{
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    transform: skew(1.03);
     cursor: pointer;
 }
