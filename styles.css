@@ -64,12 +64,12 @@ h1, ul,li{
     }
     .contact{
         position: fixed;
-        bottom: 59px;
-        right: 10px;
+        bottom: 67px;
+        right: 15px;
         border-radius: 30%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .contact:hover{
-        transform: scale(1.1);
+        transform: scale(1.09);
         transition: transform 0.3s ease;
     }
