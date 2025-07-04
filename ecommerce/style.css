@@ -2,7 +2,6 @@ body{
     background-color: whitesmoke;
 }
 h1 {
-    /* color: darkblue; */
     text-align: center;
 }
 .header {
@@ -38,20 +37,19 @@ h1 {
     }
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
     height: 640px;
     width: 335px;
     border: solid 1px darkgray;
     border-radius: 10px;
     padding: 10px;
-    margin: 10px;
+    margin: 8px;
     background-color: white;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     flex: 0 1 255px;
 }
 .product:hover {
-    color: whitesmoke;
+    color: rgb(9, 0, 0);
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
     cursor: pointer;
 }
