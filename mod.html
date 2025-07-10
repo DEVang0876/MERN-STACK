@@ -20,9 +20,17 @@
             function getTag()
             {
                 var a = document.getElementById("fire").innerHTML
+                
             }
             function setTag(){
                 document.getElementById("fire").innerHTML = "<p><i>KING</i></p>"
+            }
+
+            function doSum(){
+                var a = document.getElementById("txt1").value
+                var b = document.getElementById("txt2").value
+                var c=parseInt(a)+parseInt(b)
+                document.getElementById("txt3").innerHTML = "sum is "+c             
             }
         </script>
         <!-- <script src="script.js"></script> -->
@@ -35,6 +43,11 @@
         <input type="button" onclick="demo2()" value="button3"><br>
         <input type="button" onclick="getTag()" value="button4"><br>
         <input type="button" onclick="setTag()" value="button5"><br>
-        <p id="fire">ABCD</p><br>
+        <p id="fire">ABCD</p><br><br><br>
+
+        <input type="txt" id="txt1">
+        <input type="txt" id="txt2">
+        <input type="button" onclick="doSum()", value="+"><br>
+        <p id="txt3"></p>
 
     </body>
