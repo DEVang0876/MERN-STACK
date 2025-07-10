@@ -27,8 +27,17 @@
             }
 
             function doSum(){
+                
                 var a = document.getElementById("txt1").value
                 var b = document.getElementById("txt2").value
+                if (a==null){
+                    alert("Enter num1 please")
+                    return
+                }
+                if (b==null){
+                    alert("Enter num1 please")
+                    return
+                }
                 var c=parseInt(a)+parseInt(b)
                 document.getElementById("txt3").innerHTML = "sum is "+c             
             }
