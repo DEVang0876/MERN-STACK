@@ -89,3 +89,46 @@ document.writeln("<br><br><br>Using ForEach loop:");
 fruits.forEach(function(fruit) {
     document.writeln("<br>Fruit: " + fruit);
 });
+
+
+
+//functions
+
+function add(a, b) {
+    return a + b;
+}
+
+document.writeln("<br><br><br>Sum of 5 and 10 is: " + add(5, 10));
+
+function subtract() {
+    document.writeln("<br>Subtract function called");
+}
+
+subtract();
+
+function multiply(a, b) {
+    document.writeln("<br>Multiplication of " + a + " and " + b + " is: " + (a * b));
+}
+
+multiply(5, 10);
+
+function divide() {
+    return "Division function called";
+}
+var x= divide();
+document.writeln("<br>"+x);
+
+const operations = ()=> "Operations function called";
+var y= operations();
+document.writeln("<br>" + y);
+
+
+const calculate = (a, b) => {
+    document.write("<br>Calculate function called"+ (a+b));
+}
+calculate(10, 20);
+
+
+const fun=(obj) => {return obj}
+document.writeln("<br>fun. "+ fun("OBJECT"))
+
