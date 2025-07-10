@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Page - Example Application</title>
+        <script>
+            document.write("<b>I am Bold, Intenal</b>");
+            function demo1(){
+                alert("Button Clicked")
+            }
+            function confirmation(){
+                var a =confirm("Click if you are human")
+                if (a!=true){
+                    alert("You can not Use the application")
+                }
+            }
+            function demo2(){
+                var a = prompt("Enter text")
+                document.writeln(a)
+            }
+            function getTag()
+            {
+                var a = document.getElementById("fire").innerHTML
+            }
+            function setTag(){
+                document.getElementById("fire").innerHTML = "<p><i>KING</i></p>"
+            }
+        </script>
+        <!-- <script src="script.js"></script> -->
+        
+    </head>
+    <body bgcolor="lightcyan" text="black" link="blue" vlink="purple" alink="red">
+        <h1>Welcome to the Example Application</h1>
+        <input type="button" onclick="demo1()" value="button1"><br>
+        <input type="button" onclick="confirmation()" value="button2"><br>
+        <input type="button" onclick="demo2()" value="button3"><br>
+        <input type="button" onclick="getTag()" value="button4"><br>
+        <input type="button" onclick="setTag()" value="button5"><br>
+        <p id="fire">ABCD</p><br>
+
+    </body>
