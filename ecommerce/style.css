@@ -89,6 +89,6 @@ h1 {
 }
 .product button:hover{
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
-    transform: skew(1.03);
+    transform: scale(1.01);
     cursor: pointer;
 }
