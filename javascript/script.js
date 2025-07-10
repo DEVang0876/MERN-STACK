@@ -11,5 +11,13 @@ if (z > 20) {
     document.writeln("<br>Sum is greater than 20");
 }
 else {
-    document.writeln("<br>Sum is not greater than 20");
+    document.writeln("<br><h1><i>Sum is not greater than 20<i></h1>");
 }
+
+function greet(name) {
+    document.writeln("<br>Hello, " + name + "!");
+}
+
+greet("Tony Stark");
+
+
