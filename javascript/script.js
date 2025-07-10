@@ -21,3 +21,7 @@ function greet(name) {
 greet("Tony Stark");
 
 
+// Var --> Global Scope
+// Let --> Block Scope
+// Const --> Block Scope, Immutable 
+
