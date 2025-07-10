@@ -1,0 +1,1 @@
+document.writeln("<br><br>Hello, World! , From External JS File");
