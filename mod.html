@@ -30,13 +30,13 @@
                 
                 var a = document.getElementById("txt1").value
                 var b = document.getElementById("txt2").value
-                if (a==null){
+                if (a===""){
                     alert("Enter num1 please")
-                    return
+                    return;
                 }
-                if (b==null){
+                if (b===""){
                     alert("Enter num1 please")
-                    return
+                    return;
                 }
                 var c=parseInt(a)+parseInt(b)
                 document.getElementById("txt3").innerHTML = "sum is "+c             
