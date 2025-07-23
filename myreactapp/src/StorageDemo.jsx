@@ -1,4 +1,3 @@
-// StorageDemo.js
 import React, { useState } from 'react';
 
 function StorageDemo() {
@@ -12,8 +11,13 @@ function StorageDemo() {
   };
 
   const loadFromLocal = () => {
-    const value = localStorage.getItem('myLocalText');
-    setLocalResult(value || '');
+    setLocalResult(localStorage.getItem('myLocalText') || '');
+  };
+
+  const removeFromLocal = () => {
+    localStorage.removeItem('myLocalText');
+    setLocalResult('');
+    alert('Removed from localStorage!');
   };
 
   const saveToSession = () => {
@@ -22,8 +26,13 @@ function StorageDemo() {
   };
 
   const loadFromSession = () => {
-    const value = sessionStorage.getItem('mySessionText');
-    setSessionResult(value || '');
+    setSessionResult(sessionStorage.getItem('mySessionText') || '');
+  };
+
+  const removeFromSession = () => {
+    sessionStorage.removeItem('mySessionText');
+    setSessionResult('');
+    alert('Removed from sessionStorage!');
   };
 
   return (
@@ -42,11 +51,17 @@ function StorageDemo() {
       <button onClick={loadFromLocal} style={{ marginLeft: '10px' }}>
         Load from Local
       </button>
+      <button onClick={removeFromLocal} style={{ marginLeft: '10px' }}>
+        Remove from Local
+      </button>
       <p><b>Local:</b> {localResult}</p>
 
       <button onClick={saveToSession}>Save to Session</button>
       <button onClick={loadFromSession} style={{ marginLeft: '10px' }}>
         Load from Session
+      </button>
+      <button onClick={removeFromSession} style={{ marginLeft: '10px' }}>
+        Remove from Session
       </button>
       <p><b>Session:</b> {sessionResult}</p>
     </div>
