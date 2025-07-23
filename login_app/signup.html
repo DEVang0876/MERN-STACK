@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="login-container"> 
+        <h2 class="logintext">Create Account</h2>
+
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="e.g. Abdul Kalam" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="text" id="mobile" placeholder="e.g. 9876543210" required>
+
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Address" required>
+
+        <label>Gender</label>
+        <div style="display: flex; gap: 16px;">
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="e.g. kalamsir@icloud.com" required>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Username" required>
+
+        <label for="createPassword">Create Password</label>
+        <input type="password" id="createPassword" placeholder="Password" required>
+
+        <label for="confirmPassword">Re-enter Password</label>
+        <input type="password" id="confirmPassword" placeholder="Password" required>
+
+        <button id="signupButton" onclick="handleSignup()">Sign Up</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
