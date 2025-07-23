@@ -41,7 +41,7 @@
 
 // export default App
 
-
+import StorageDemo from "./StorageDemo";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
@@ -64,8 +64,13 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
         </Routes>
       </div>
+      <div>
+        <StorageDemo />
+      </div>
     </Router>
   );
 }
 
 export default App;
+
+
