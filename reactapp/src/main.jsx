@@ -4,12 +4,12 @@ import './index.css'
 import App from './App.jsx'
 import Event from './Event.jsx'
 import Sum from './sum.jsx'
+import Hooks from './Hooks.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <Sum />
-    <Event/>
+    
     
   </StrictMode>,
 )
