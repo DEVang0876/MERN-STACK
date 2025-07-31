@@ -7,6 +7,7 @@ import Contact from './contact'
 import Event from './Event.jsx'
 import Sumdemo from './sum.jsx'
 import Hooks from './Hooks.jsx'
+import Calculator from './cal.jsx'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Link to="/hooks">Hooks</Link>
         <Link to="/sum">Sum</Link>
         <Link to="/event">Event</Link>
+        <Link to="/calculator">Calculator</Link>
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -29,6 +31,7 @@ function App() {
           <Route path="/Hooks" element={<Hooks />} />
           <Route path="/sum" element={<Sumdemo />} />
           <Route path="/Event" element={<Event />} />
+          <Route path="/calculator" element={<Calculator />} />
         </Routes>
       </div>
     </Router>
