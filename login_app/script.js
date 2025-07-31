@@ -1,4 +1,6 @@
-function handleSignup() {
+function handleSignup() 
+{
+
     const name = document.getElementById("fullname").value;
     const email = document.getElementById("email").value;
     const mobile = document.getElementById("mobile").value;
@@ -8,7 +10,8 @@ function handleSignup() {
     const password = document.getElementById("createPassword").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
-    if (password !== confirmPassword) {
+    if (password !== confirmPassword) 
+    {
         alert("Passwords do not match!");
         return;
     }
@@ -25,7 +28,8 @@ function handleSignup() {
     window.location.href = "index.html";
 }
 
-function handleLogin() {
+function handleLogin() 
+{
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
 
@@ -40,28 +44,35 @@ function handleLogin() {
     }
 }
 
-function handleForgotPassword() {
+function handleForgotPassword() 
+{
     const username = document.getElementById("forgotUsername").value;
     const newPassword = document.getElementById("newPassword").value;
     const confirmNewPassword = document.getElementById("confirmNewPassword").value;
 
-    if (newPassword !== confirmNewPassword) {
-        alert("Passwords do not match!");
+    if (newPassword !== confirmNewPassword) 
+        {
+        alert("Passwords do not match");
         return;
     }
 
-    if (username === localStorage.getItem("username")) {
+    if (username === localStorage.getItem("username")) 
+        {
         localStorage.setItem("password", newPassword);
         alert("Password successfully updated!");
         window.location.href = "index.html";
-    } else {
+    } 
+    else 
+    {
         alert("Username not found!");
     }
 }
 
-function displayUserInfo() {
+function displayUserInfo() 
+{
     const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn !== "true") {
+    if (isLoggedIn !== "true") 
+    {
         alert("You must login first.");
         window.location.href = "index.html";
         return;
@@ -75,11 +86,13 @@ function displayUserInfo() {
     document.getElementById("displayUsername").textContent = localStorage.getItem("username") || "";
 }
 
-function handleLogout() {
+function handleLogout() 
+{
     localStorage.setItem("isLoggedIn", "false");
     window.location.href = "index.html";
 }
 
-if (window.location.pathname.endsWith("home.html")) {
+if (window.location.pathname.endsWith("home.html")) 
+{
     window.onload = displayUserInfo;
 }
