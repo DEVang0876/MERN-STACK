@@ -22,7 +22,7 @@ doValidation() {
     let temperr = {};
     let isValid = true;
 
-    // Check Condition for Textbox1
+   
     if (!txt1) {
       temperr.txt1 = "Enter No1";
       isValid = false;
