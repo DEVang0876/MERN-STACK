@@ -11,8 +11,8 @@ var app = express();
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.7')
-.then(() => console.log('DB Connected to'))
-.catch((err) => console.error('DB Connection Failed:', err.message || err));
+.then(() => console.log('MongoDB Connected'))
+.catch((err) => console.error('MongoDB Connection Failed:', err.message || err));
 
 
 app.set('views', path.join(__dirname, 'views'));
