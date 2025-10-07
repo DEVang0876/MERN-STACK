@@ -1,53 +1,66 @@
-const express =require('express')
+const express = require('express')
+const path = require('path')
 const app = express()
-const port=3000
+const port = 3000
 
-app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
-app.use(express.urlencoded());
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
+app.use(express.urlencoded({ extended: true }))
 
-app.use(express.static('public'));
+
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res) => {
-    res.send("Hello world")
+    res.send('Hello world')
 })
 
-app.get('/home', (req,res)=>{
-    res.sendFile(__dirname + '/home.html');
+app.get('/sum', (req, res) => {
+    res.render('sum', { sum: null })
 })
 
-app.get('/about', (req,res)=>{
-    res.sendFile(__dirname + '/about.html');
+app.post('/sum', (req, res) => {
+    const { num1, num2 } = req.body
+    const sum = parseFloat(num1 || 0) + parseFloat(num2 || 0)
+    res.redirect(`/ans?sum=${encodeURIComponent(sum)}`)
 })
+
+
+app.get('/ans', (req, res) => {
+    const sum = typeof req.query.sum !== 'undefined' ? req.query.sum : null
+    res.render('ans', { sum })
+})
+
+
+
 
 app.get('/params/:id/:id1', (req, res) => {
-    const { id, id1 } = req.params;
-    res.send(`Received params: ${id}, ${id1}`);
+    const { id, id1 } = req.params
+    res.send(`Received params: ${id}, ${id1}`)
 })
 
 app.get('/search/:query', (req, res) => {
-    const query = req.params.query;
-    res.send(`Search results for: ${query}`);
+    const query = req.params.query
+    res.send(`Search results for: ${query}`)
 })
 
 app.get('/search', (req, res) => {
-    const query = req.params.query;
-    res.send(`Search results for: ${query}`);
+    // example: /search?q=term
+    const query = req.query.q || ''
+    res.send(`Search results for: ${query}`)
 })
 
 app.get('/contactprocess', (req, res) => {
-    res.sendFile(__dirname + '/contact.html');
+    res.sendFile(path.join(__dirname, 'contact.html'))
 })
 
-app.get('/sum'), (req,res)=>{
-    res.sendFile(__dirname + '/sum.html');
-}
-app.post('/sum', (req, res) => {
-    const { num1, num2 } = req.body;
-    const sum = parseFloat(num1) + parseFloat(num2);
-    res.render('sum', { sum });
-});
+app.listen(port, () => {
+    console.log(`example running on port ${port}`)
+})
 
-app.listen(port, ()=>{
-    console.log(`example runiing on port ${port}`)
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, 'home.html'))
+})
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'about.html'))
 })

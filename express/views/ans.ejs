@@ -1,1 +1,15 @@
-<%%= sum %>
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sum Answer</title>
+		<link rel="stylesheet" href="/styles.css">
+	</head>
+	<body style="padding:20px;">
+		<% if (typeof sum !== 'undefined' && sum !== null) { %>
+			<h1>Result: <%= sum %></h1>
+		<% } else { %>
+			<h1>No result available</h1>
+		<% } %>
+	</body>
+</html>
